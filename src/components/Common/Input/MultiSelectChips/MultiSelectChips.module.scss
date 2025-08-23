@@ -1,0 +1,47 @@
+.multiSelectContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.chipsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.chip {
+    background-color: #4CAF50; /* Chip background color */
+    color: white; /* Chip text color */
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.closeIcon {
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.optionsContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.option {
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.option:hover {
+    background-color: #f0f0f0; /* Hover effect */
+}
+
+.selected {
+    background-color: #4CAF50; /* Selected option color */
+    color: white; /* Selected text color */
+}

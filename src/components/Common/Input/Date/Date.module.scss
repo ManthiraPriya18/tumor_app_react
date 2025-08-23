@@ -1,0 +1,20 @@
+.customDateTimeInput {
+    width: fit-content;
+
+    height: 30px;
+    padding: 8px;
+    font-size: 16px;
+    background-color: var(--base-palette-black-700);
+    border: 1px solid var(--base-palette-black-600);
+    border-radius: 8px;
+    color: var(--base-palette-black-40);
+    transition: background-color 0.3s ease;
+}
+
+.customDateTimeInput:focus {
+    outline: none;
+}
+
+.customDateTimeInput:hover {
+    background-color: var(--base-palette-black-650);
+}

@@ -1,0 +1,41 @@
+------------------------------------------------------
+Version  : 0.0.1
+Branch   : release/v_0.0.1
+Changes  :
+         - Basic working Expense tracker (Just functionality No good UI)
+
+------------------------------------------------------
+------------------------------------------------------
+Version  : 0.0.2
+Branch   : release/v_0.0.2
+Changes  :
+         - Export to Excel
+         - Backend as supabase
+------------------------------------------------------
+Version  : 0.0.3
+Branch   : release/v_0.0.3
+Changes  :
+         - Group By Date Fix
+         - Search Date Filter In Grid Fix 
+------------------------------------------------------
+Date : 24/July/2025
+Version :v0.0.4
+Branch : release/v0.0.4_24_July_2025
+Changes:
+    - Create expense with AI
+    - Created a supabase function -> Gemini API
+------------------------------------------------------
+Date: 09/Aug/2025
+Version: v0.0.5
+Branch: release/v0.0.5
+Changes:
+    - Add Expense Fix 
+    - Edit expense time overridden fix 
+
+Open Issue:
+    - With Timings - In search & while listing -> It is showing in UTC 
+    - Timing is messed in this code -> Lot of conversion between utc and ist 
+    - Hence added a new column called SpendDateTimeInUtcZ in ExpenseDetails Table
+        - When user created with spendDateTime the same data will be stored here -> Immutable
+
+------------------------------------------------------

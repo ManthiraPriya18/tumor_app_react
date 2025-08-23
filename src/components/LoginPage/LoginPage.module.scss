@@ -1,0 +1,30 @@
+.loginOuter{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.title{
+    font-size: xx-large;
+    color: var(--base-palette-black-40);
+    font-weight: bold;
+}
+.LoginInp{
+    width: 300px;
+}
+
+.remember{
+    color: var(--base-palette-black-40);
+    cursor: pointer;
+}
+
+
+
+.customCheckbox input[type="checkbox"]:checked {
+    accent-color: green;
+}
+

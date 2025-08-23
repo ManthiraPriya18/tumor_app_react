@@ -1,0 +1,276 @@
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--base-palette-black-725);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+:root {
+  --base-palette-red-50: #ffe6ed;
+  --base-palette-red-75: #ff96b6;
+  --base-palette-red-100: #ff6b97;
+  --base-palette-red-150: #ff467d;
+  --base-palette-red-200: #ff2b6a;
+  --base-palette-red-300: #ff005c;
+  --base-palette-red-400: #d80f57;
+  --base-palette-red-500: #b10f49;
+  --base-palette-red-800: #8c183a;
+  --base-palette-red-850: #6b122d;
+  --base-palette-red-900: #3d2222;
+  --base-palette-green-50: #e6fcf5;
+  --base-palette-green-75: #c2fdeb;
+  --base-palette-green-100: #96f2d6;
+  --base-palette-green-150: #6bedc6;
+  --base-palette-green-200: #2be5ad;
+  --base-palette-green-300: #00db9a;
+  --base-palette-green-400: #00b27d;
+  --base-palette-green-500: #008960;
+  --base-palette-green-800: #007d58;
+  --base-palette-green-850: #025a40;
+  --base-palette-green-900: #1d342d;
+  --base-palette-orange-50: #fff5e7;
+  --base-palette-orange-75: #ffd69d;
+  --base-palette-orange-100: #ffc574;
+  --base-palette-orange-150: #ffb752;
+  --base-palette-orange-200: #ffac38;
+  --base-palette-orange-300: #ff9b0f;
+  --base-palette-orange-350: #EA8900;
+  --base-palette-orange-400: #b36d0b;
+  --base-palette-orange-500: #9c5f09;
+  --base-palette-orange-800: #7f4c04;
+  --base-palette-orange-850: #633b03;
+  --base-palette-orange-900: #3e3219;
+  --base-palette-black-0: #ffffff;
+  --base-palette-black-10: #fafafa;
+  --base-palette-black-20: #f5f5f5;
+  --base-palette-black-25: #f1f1f1;
+  --base-palette-black-30: #ebebeb;
+  --base-palette-black-40: #dedede;
+  --base-palette-black-50: #bfbfbf;
+  --base-palette-black-60: #b0b0b0;
+  --base-palette-black-70: #a3a3a3;
+  --base-palette-black-80: #949494;
+  --base-palette-black-90: #858585;
+  --base-palette-black-100: #757575;
+  --base-palette-black-200: #666666;
+  --base-palette-black-300: #575757;
+  --base-palette-black-400: #4a4a4a;
+  --base-palette-black-500: #3b3b3b;
+  --base-palette-black-600: #2e2e2e;
+  --base-palette-black-625: #2a2929;
+  --base-palette-black-650: #262626;
+  --base-palette-black-675: #222222;
+  --base-palette-black-700: #1c1c1c;
+  --base-palette-black-725: #191919;
+  --base-palette-black-735: #161616;
+  --base-palette-black-750: #121212;
+  --base-palette-black-800: #0d0d0d;
+  --base-palette-black-900: #000000;
+  --base-palette-black-0t10: rgb(255 255 255 / .1);
+  --base-palette-black-725t5: rgb(25 25 25 / .05);
+  --base-palette-black-900t5: rgb(0 0 0 / .05);
+  --base-palette-blue-25: #f5f9ff;
+  --base-palette-blue-50: #e6f2ff;
+  --base-palette-blue-60: #cee5ff;
+  --base-palette-blue-75: #b0d6ff;
+  --base-palette-blue-80: #8ac2ff;
+  --base-palette-blue-100: #54a7ff;
+  --base-palette-blue-200: #3395ff;
+  --base-palette-blue-250: #1f8bff;
+  --base-palette-blue-300: #007bff;
+  --base-palette-blue-400: #0070e8;
+  --base-palette-blue-500: #0057b5;
+  --base-palette-blue-600: #0f4a8b;
+  --base-palette-blue-900: #15222e;
+  --base-palette-gradients-purple: linear-gradient(97deg, rgba(163, 75, 233, 1), rgba(82, 43, 92, 1));
+  --base-palette-gradients-green: linear-gradient(97deg, rgba(0, 168, 57, 1), rgba(0, 201, 189, 1));
+  --base-typography-huge: 600 58px / 70px intervariable, sans-serif;
+  --base-typography-large: 700 36px / 44px intervariable, sans-serif;
+  --base-typography-h1: 600 28px / 36px intervariable, sans-serif;
+  --base-typography-h2: 600 24px / 32px intervariable, sans-serif;
+  --base-typography-h3: 500 20px / 28px intervariable, sans-serif;
+  --base-typography-h4: 500 18px / 24px intervariable, sans-serif;
+  --base-typography-h5: 500 16px / 24px intervariable, sans-serif;
+  --base-typography-h6: 500 14px / 20px intervariable, sans-serif;
+  --base-typography-body_large: 400 16px / 24px intervariable, sans-serif;
+  --base-typography-action_large: 500 16px / 24px intervariable, sans-serif;
+  --base-typography-body: 400 14px / 20px intervariable, sans-serif;
+  --base-typography-action: 500 14px / 20px intervariable, sans-serif;
+  --base-typography-body_small: 400 12px / 18px intervariable, sans-serif;
+  --base-typography-hint: 400 12px / 18px intervariable, sans-serif;
+  --base-typography-tag: 600 10px / 1 intervariable, sans-serif;
+  --base-typography-code_large: 500 14px / 1.4 commitmono, monospace;
+  --base-typography-code_small: 400 12px / 1.4 commitmono, monospace;
+  --base-font-price-normal: 500 16px / 1 intervariable, sans-serif;
+  --base-n-hover-transition: background-color .5s, color .5s;
+  --base-n-hover-shadow: 0 1px 6px 0 rgb(23 26 28 / .12);
+  --base-border-radius-m: 8px;
+  --base-border-radius-s: 6px;
+  --base-border-radius-xs: 4px;
+  --base-hover-opacity: .7;
+  --base-hover-scale: scale(.96);
+  --base-hover-transition: .2s ease-in-out;
+  --base-animation-spin: spin 2s linear 0s infinite;
+  --base-input-fixed-size-width: 280px;
+  --base-breakpoint-mobile-min-width: 320px;
+  --base-breakpoint-tablet-min-width: 768px;
+  --base-breakpoint-s-min-width: 1024px;
+  --base-breakpoint-m-min-width: 1440px;
+  --base-breakpoint-l-min-width: 1600px;
+  --base-breakpoint-xl-min-width: 1920px;
+  --component-form_select-line_height: 24px;
+  --component-layout_with_side_nav-min_width: var(--base-breakpoint-s-min-width);
+  --component-sign_in-options_link-font: 500 12px / 1.3 "IBM Plex Sans";
+  --component-sign_in-options_link-color: #5093F7;
+  --component-sign_in-title_text-font: 500 14px / 1.2 "IBM Plex Sans";
+  --component-sign_in-title_text-color: var(--base-palette-black-0);
+  --component-sign_in-legal-font: 400 12px / 1.3 "IBM Plex Sans";
+  --component-sign_in-legal-color: #898989;
+  --component-sign_in-form-background_color: #1A1A1A;
+  --component-sign_in-form-text_color: var(--base-palette-black-0);
+  --component-sign_in-logo_container-background_color: #131313;
+  --component-sign_in-logo_container-border_color: #252525;
+  --component-sign_in-logo_container-text-color: #FFFFFF;
+  --component-sign_in-logo_container-text-font: 700 36px / 1.25 "IBM Plex Sans";
+  --component-brand_button-font: 500 14px / 1.2 "IBM Plex Sans";
+  --component-brand_button-background_color: var(--base-palette-black-0);
+  --component-brand_button-border_color: #292929;
+  --component-brand_button-color: #0c0d0d;
+  --component-brand_button-hover_color: var(--base-palette-black-30);
+  --component-drawer-cover_shrunk_height: 80px;
+  --component-drawer-width-s: 378px;
+  --component-drawer-width-m: 480px;
+  --component-drawer-width-l: 720px;
+  --component-drawer-animation-in: .2s ease-out;
+  --component-drawer-animation-out: .3s ease-in-out;
+  --component-drawer-icon-border_color: var(--base-palette-black-40);
+  --component-drawer-icon-background_color: var(--base-palette-black-0);
+  --component-integration_drawer-close_button-color: var(--base-palette-black-50);
+  --component-integration_drawer-close_button-background_color: var(--base-palette-black-735);
+  --component-integration_drawer-hover-close_button-background_color: var(--base-palette-black-700);
+  --component-badge-beta-text: var(--base-palette-black-0);
+  --component-badge-beta-gradient: linear-gradient(97deg, rgba(163, 75, 233, 1), rgba(82, 43, 92, 1));
+  --component-banner-background-gradient: linear-gradient(97deg, rgba(163, 75, 233, 1), rgba(82, 43, 92, 1));
+}
+
+
+
+::selection {
+  background-color: var(--app-green-color);
+  color: var(--app-text-white-color);
+}
+
+::-webkit-scrollbar {
+  height: 0; /* Initially hide the scrollbar */
+  transition: height 0.3s ease; /* Smooth transition */
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 8px; /* Show the scrollbar on hover */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--base-palette-black-400); /* Customize the scrollbar thumb */
+  border-radius: 4px; /* Optional: round the scrollbar corners */
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--base-palette-black-700); /* Customize the scrollbar track */
+}
+
+
+
+.ag-header-row:not(:first-child) .ag-header-cell:not(.ag-header-span-height.ag-header-span-total, .ag-header-parent-hidden),
+.ag-header-row:not(:first-child) .ag-header-group-cell.ag-header-group-cell-with-group {
+    background-color: var(--base-palette-black-500) !important;
+    color: var(--base-palette-black-40) !important;
+
+}
+.ag-theme-alpine .ag-ltr input[class^=ag-][type=text],
+.ag-floating-filter-input .ag-input-field-input[type=date],
+.ag-floating-filter-input .ag-input-field-input[type=number] {
+  background-color: var(--base-palette-black-400) !important;
+  color: var(--base-palette-black-40) !important;
+}
+.ag-theme-alpine .ag-ltr input[class^=ag-][type=text]:focus,
+.ag-floating-filter-input .ag-input-field-input[type=date]:focus,
+.ag-floating-filter-input .ag-input-field-input[type=number]:focus {
+  border-color:var(--base-palette-black-40)!important; /* Change this to your preferred color */
+  outline: none !important; /* Optional: removes the default outline */
+  box-shadow: none !important; 
+}
+.ag-icon, .ag-ltr .ag-label {
+  color: var(--base-palette-black-40) !important;
+
+}
+.ag-simple-filter-body-wrapper{
+  background-color: var(--base-palette-black-400) !important;
+
+}
+.ag-select .ag-picker-field-wrapper{
+  background-color: var(--base-palette-black-400) !important;
+  color: var(--base-palette-black-40) !important;
+
+}
+.ag-theme-alpine .ag-ltr input[class^=ag-][type=date]{
+  background-color: var(--base-palette-black-400) !important;
+  color: var(--base-palette-black-40) !important;
+}
+
+.ag-header-cell {
+   background-color: var(--base-palette-black-500);
+
+  &:hover {
+    background-color: var(--base-palette-black-500) !important;
+
+  }
+}
+
+.ag-theme-alpine{
+  --ag-alpine-active-color: var(--base-palette-black-300) !important;
+  --ag-selected-row-background-color: rgba(33, 150, 243, 0.3) !important;
+    --ag-row-hover-color: rgba(33, 150, 243, 0.1) !important;
+    --ag-column-hover-color: rgba(33, 150, 243, 0.1) !important;
+}
+
+.ag-center-cols-viewport{
+  background-color: var(--base-palette-black-400) !important;
+
+}
+
+.ag-ltr .ag-row {
+  background-color: var(--base-palette-black-600) !important;
+}
+
+.ag-ltr .ag-row:hover {
+  background-color: var(--base-palette-black-400) !important;
+}
+
+.ag-filter-apply-panel{
+  background-color: var(--base-palette-black-400) !important;
+  color: var(--base-palette-black-40) !important;
+}
+
+.ag-filter-apply-panel-button{
+  cursor: pointer;
+  background-color: var(--base-palette-black-600) !important;
+  color: var(--base-palette-black-40) !important;
+  box-shadow: none !important;
+}
+
+
+
+::selection {
+  background-color: #37996B;
+  color: #dedede;
+}

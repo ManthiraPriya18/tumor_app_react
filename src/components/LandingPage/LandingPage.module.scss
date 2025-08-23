@@ -1,0 +1,26 @@
+.tileOuter{
+    cursor: pointer;
+    width: fit-content;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid var(--base-palette-black-30);
+    background-color: var(--base-palette-black-700);
+}
+
+.tileTitle{
+    font-size: xx-large;
+    color: var(--base-palette-black-40);
+    font-weight: bold;
+}
+
+.tileDesc{
+    font-size: medium;
+    color: var(--base-palette-black-40);
+    font-weight: bold;
+}
+
+.topbar{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}

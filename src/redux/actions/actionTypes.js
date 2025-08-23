@@ -1,0 +1,2 @@
+export const COUNTER_VALUE="COUNTER_VALUE"
+export const EXPENSE_DATA="EXPENSE_DATA"

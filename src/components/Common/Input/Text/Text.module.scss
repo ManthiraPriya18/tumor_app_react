@@ -1,0 +1,27 @@
+.textBox {
+    width: 97%; // Full width
+    height: 30px; // Set a fixed height
+    padding: 10px; // Padding for spacing
+    border: 1px solid var(--base-palette-black-600);
+    border-radius: 8px; // Rounded corners
+    transition: border-color 0.3s; // Smooth transition for border color
+    color: var(--base-palette-black-60);
+    // Optional: Add a background color
+    background-color: var(--base-palette-black-700); // White background for the input
+    cursor: text; 
+    &:focus {
+        border-color: var(--base-palette-black-500); // Change border color on focus
+        outline: none; // Remove default outline
+    }
+
+    &:disabled {
+        cursor: not-allowed; // Not-allowed cursor style
+    }
+    -moz-appearance: textfield; // Firefox
+    &::-webkit-outer-spin-button, // Chrome, Safari, Edge
+    &::-webkit-inner-spin-button { // Chrome, Safari, Edge
+        -webkit-appearance: none; // Disable default appearance
+        margin: 0; // Remove margins
+    }
+}
+

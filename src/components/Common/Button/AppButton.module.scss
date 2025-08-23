@@ -1,0 +1,20 @@
+.appBtnOuter {
+    height: 100%;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--base-palette-black-40);
+    color: var(--base-palette-black-40);
+    font-weight: bold;
+    background-color: var(--base-palette-black-700);
+    font-size: small;
+    &:hover {
+        background-color: var(--base-palette-black-500);
+        color: var(--base-palette-black-30);;
+    }
+}
