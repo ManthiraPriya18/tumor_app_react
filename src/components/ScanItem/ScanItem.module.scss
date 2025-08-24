@@ -1,0 +1,365 @@
+.scanItem {
+  background: var(--base-palette-black-700);
+  border-radius: var(--base-border-radius-m);
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  border: 1px solid var(--base-palette-black-650);
+
+  &:hover {
+    transform: translateY(-4px);
+//     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+//    border-color: var(--base-palette-black-0);
+  }
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+    border-radius: var(--base-border-radius-s);
+  }
+}
+
+.actionButtons {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  z-index: 10;
+}
+
+.downloadBtn,
+.deleteBtn {
+  background: var(--base-palette-black-650);
+  border: 1px solid var(--base-palette-black-600);
+  border-radius: var(--base-border-radius-xs);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+
+  &:hover {
+    background: var(--base-palette-black-600);
+   // border-color: var(--base-palette-black-0);
+    transform: scale(1.1);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.downloadBtn {
+  color: var(--base-palette-green-300);
+
+  &:hover {
+    background: var(--base-palette-green-300);
+    color: var(--base-palette-black-900);
+   // border-color: var(--base-palette-green-300);
+  }
+}
+
+.deleteBtn {
+  color: var(--base-palette-red-300);
+
+  &:hover {
+    background: var(--base-palette-red-300);
+    color: var(--base-palette-black-0);
+   // border-color: var(--base-palette-red-300);
+  }
+}
+
+.scanHeader {
+  border-bottom: 2px solid var(--base-palette-black-650);
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.patientInfo {
+  .patientName {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font: var(--base-typography-h3);
+    color: var(--base-palette-black-0);
+    margin-bottom: 0.5rem;
+
+    @media (max-width: 768px) {
+      font: var(--base-typography-h4);
+    }
+
+    svg {
+      color: var(--base-palette-green-300);
+    }
+
+    span {
+      line-height: 1;
+    }
+  }
+
+  .patientDetails {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    color: var(--base-palette-black-100);
+    font: var(--base-typography-body);
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+  }
+}
+
+.age {
+  font: var(--base-typography-action);
+  color: var(--base-palette-green-200);
+  background: var(--base-palette-black-650);
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--base-border-radius-xs);
+  border: 1px solid var(--base-palette-black-600);
+}
+
+.datetime {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--base-palette-black-80);
+
+  svg {
+    color: var(--base-palette-blue-300);
+  }
+
+  span {
+    margin-right: 0.5rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.scanContent {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 2rem;
+  align-items: start;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 480px) {
+    gap: 1rem;
+  }
+}
+
+.imagesSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.viewOriginalBtn {
+  background: var(--base-palette-gradients-green);
+  color: var(--base-palette-black-0);
+  border: none;
+  border-radius: var(--base-border-radius-s);
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font: var(--base-typography-action);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 219, 154, 0.3);
+    filter: brightness(1.1);
+
+    &::before {
+      left: 100%;
+    }
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.imageContainer {
+  position: relative;
+  border-radius: var(--base-border-radius-s);
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+  border: 1px solid var(--base-palette-black-650);
+
+  &:hover {
+    border-color: var(--base-palette-black-0);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+
+    .imageOverlay {
+      opacity: 1;
+    }
+
+    .scanImage {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.scanImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: var(--base-palette-black-0);
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  gap: 0.5rem;
+  font: var(--base-typography-action);
+  backdrop-filter: blur(2px);
+
+  svg {
+    color: var(--base-palette-green-300);
+  }
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.9);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.analysisSection {
+  background: var(--base-palette-black-675);
+  border-radius: var(--base-border-radius-s);
+  padding: 1.5rem;
+  border: 1px solid var(--base-palette-black-650);
+  border-left: 4px solid var(--base-palette-green-300);
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
+}
+
+.analysisContent {
+  font: var(--base-typography-body);
+  line-height: 1.6;
+  color: var(--base-palette-black-50);
+
+  .analysisLine {
+    margin-bottom: 0.5rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    // Style for different indicators
+    &:has-text("🔴") {
+      color: var(--base-palette-red-200);
+    }
+
+    &:has-text("✅") {
+      color: var(--base-palette-green-200);
+    }
+
+    &:has-text("🟡") {
+      color: var(--base-palette-orange-200);
+    }
+  }
+
+  strong {
+    color: var(--base-palette-black-0);
+    font-weight: 600;
+  }
+
+  // Specific styling for confidence and classification sections
+  :global {
+    .analysisLine:contains("Confidence") {
+      font-weight: 600;
+      color: var(--base-palette-green-100);
+    }
+
+    .analysisLine:contains("Detailed Classification") {
+      font-weight: 600;
+      color: var(--base-palette-blue-200);
+      margin-top: 1rem;
+      padding-top: 0.5rem;
+      border-top: 1px solid var(--base-palette-black-600);
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 480px) {
+  .scanItem {
+    padding: 0.75rem;
+    margin: 0 0.5rem;
+  }
+
+  .scanHeader {
+    padding-bottom: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .analysisSection {
+    padding: 0.75rem;
+  }
+
+  .actionButtons {
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+}
+
+
+
+// Animation for action buttons
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 currentColor; }
+  70% { box-shadow: 0 0 0 4px transparent; }
+  100% { box-shadow: 0 0 0 0 transparent; }
+}

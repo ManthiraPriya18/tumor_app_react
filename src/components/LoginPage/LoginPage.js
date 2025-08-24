@@ -56,7 +56,7 @@ export const LoginPage = () => {
         setIsLoading(false)
 
         if (loginStatus?.success) {
-            navigate(ROUTE_PATHS.LANDING)
+            navigate(ROUTE_PATHS.HOME)
         }
         else {
             // Something went wrong
