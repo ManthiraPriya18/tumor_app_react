@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
-import { Navigate,  } from 'react-router-dom';
+import { Navigate, } from 'react-router-dom';
 import { ROUTE_PATHS } from '../../routesConfig';
 import { ClearUserData, GetUserDetails } from '../Storage/LocalStorage';
 
@@ -43,8 +43,8 @@ export function ProtectedRoute({ children }) {
   return isAuthenticated ? children : <Navigate to={ROUTE_PATHS.LOGIN} />;
 }
 
-export const GetHashedLoginPath =()=>{
-  return "#"+ ROUTE_PATHS.LOGIN;
+export const GetHashedLoginPath = () => {
+  return "#" + ROUTE_PATHS.LOGIN;
 }
 
 export const USER_DETAILS = "USER_DETAILS"

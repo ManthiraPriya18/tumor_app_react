@@ -26,3 +26,4 @@ export const PrepareSupabaseFunctionsUrl = async (endpoint: string) => {
     console.log("Preparing Supabase Functions URL for endpoint:", appConfig);
     return `${appConfig.supabase.projectId}/functions/v1/${endpoint}`;
 };
+

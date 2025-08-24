@@ -1,3 +1,5 @@
+import { LogoutClicked } from "../Auth/Auth"
+
 export const USER_DETAILS = "USER_DETAILS"
 export const USER_ID = "USER_ID"
 export const USER_PASSWORD = "USER_PASSWORD"
@@ -7,6 +9,7 @@ export function GetUserDetails() {
     if (userDetails != null) {
         return JSON.parse(userDetails)
     }
+    LogoutClicked();
     return null;
 }
 export function SetUserDetails(userDetails) {
