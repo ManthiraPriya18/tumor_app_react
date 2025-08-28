@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const buildDir = path.join(__dirname, 'build');
-const customOutputPath = 'C:/DevFiles/chakram';
+const customOutputPath = 'C:/Manthra Dev Files/Tumor Project/TumorApp_UI_Hosting';
 const elementsPath = path.join(__dirname, 'elements');
 const outputDir = fs.existsSync(customOutputPath) ? customOutputPath : elementsPath;
 

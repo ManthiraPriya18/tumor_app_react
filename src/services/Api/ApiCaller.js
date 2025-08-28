@@ -82,9 +82,9 @@ export const GetPatientDropDownData = async () => {
 }
 
 
-export async function uploadFileToSupabase(file) {
+export async function uploadFileToSupabase(file, folder = Bucket.InputImgFolder) {
     try {
-        const filePath = `${Bucket.InputImgFolder}/${Date.now()}_${file.name}`;
+        const filePath = `${folder}/${Date.now()}_${file.name}`;
 
         // upload file
         const { error } = await supabase.storage
@@ -200,7 +200,7 @@ export async function uploadImageFromUrlToSupabase(imageUrl) {
         // give blob a "file-like" name
         const file = new File([blob], imageUrl.split("/").pop() || "image.jpg", { type: blob.type });
 
-        return await uploadFileToSupabase(file); // reuse existing logic
+        return await uploadFileToSupabase(file, Bucket.OutputImgFolder); // reuse existing logic
     } catch (err) {
         console.error("Upload from URL failed:", err.message);
         return { success: false };
