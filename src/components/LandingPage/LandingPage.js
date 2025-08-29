@@ -45,16 +45,7 @@ export const LandingPage = () => {
     }
   },[])
   return (
-    <div style={{ padding: "30px" }}>
-      <div className={styles.topbar}>
-       
-        {isUserLoggedIn ? <div>
-          <AppButton buttonStyle={{ backgroundColor: "black" }} label={userName} onclick={() => { }} />
-        </div> : <div>  <AppButton label="Login" onclick={() => { navigate(ROUTE_PATHS.LOGIN) }} /> </div>}
-      </div> 
-      <div style={{height:"20px"}}></div>
-      <AppTile tileConfig={expenseTrackerTile} />
-    </div>)
+    <div>Manthra</div>)
 }
 
 export const AppTile = ({ tileConfig }) => {

@@ -1,5 +1,6 @@
 
 import { HomePage } from "./components/HomePage/HomePage";
+import { LandingPage } from "./components/LandingPage/LandingPage";
 import { LoginPage } from "./components/LoginPage/LoginPage";
 export const ROUTE_PATHS = {
     EXPENSE_TRACKER: '/expense-tracker',
@@ -24,6 +25,11 @@ const routesConfig = [
     {
         path: ROUTE_PATHS.HOME,
         component: HomePage,
+        protected: false,
+    },
+    {
+        path: ROUTE_PATHS.LANDING,
+        component: LandingPage,
         protected: false,
     }
 
