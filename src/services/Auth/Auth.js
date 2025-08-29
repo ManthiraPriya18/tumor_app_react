@@ -46,14 +46,16 @@ export function ProtectedRoute({ children }) {
 export const GetHashedLoginPath = () => {
   return "#" + ROUTE_PATHS.LOGIN;
 }
-
+export const GetHashedLandingPath = () => {
+  return "#" + ROUTE_PATHS.LANDING;
+}
 export const USER_DETAILS = "USER_DETAILS"
 export const USER_ID = "USER_ID"
 export const USER_PASSWORD = "USER_PASSWORD"
 
 export const LogoutClicked = () => {
   ClearUserData()
-  window.location.href = GetHashedLoginPath();
+  window.location.href = GetHashedLandingPath();
 
 }
 
