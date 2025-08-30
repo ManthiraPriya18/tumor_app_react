@@ -1,0 +1,12 @@
+{
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": ["/static/*", "/*.{css,js,png,jpg,gif,ico}"]
+  },
+  "routes": [
+    {
+      "route": "/login",
+      "rewrite": "/index.html"
+    }
+  ]
+}
