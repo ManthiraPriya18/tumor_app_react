@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom'
 import { ROUTE_PATHS } from '../../routesConfig'
 import Loader from '../Common/Loader/Loader'
 import AlertManager from '../Common/AlertBox/AlertManager'
+import login from "../assets/login.png";
 
 export const LoginPage = () => {
     const navigate = useNavigate();
@@ -75,13 +76,17 @@ export const LoginPage = () => {
     return (
         <div
   className={styles.loginOuter}
+  
   style={{
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
     minHeight: "100vh",
-    background: "linear-gradient(135deg, #000000, #0a0f0d, #001f1a)",
+    background: `linear-gradient(135deg, rgba(0,0,0,0.8), rgba(10,15,13,0.8), rgba(0,31,26,0.8)), url(${login})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
     animation: "bgMove 8s infinite alternate ease-in-out",
     color: "#05fa8a",
     fontSize: "18px",
