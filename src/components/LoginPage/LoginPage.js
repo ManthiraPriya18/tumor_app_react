@@ -2,12 +2,20 @@ import { useEffect, useRef, useState } from 'react'
 import { AppButton } from '../Common/Button/AppButton'
 import { TextInput } from '../Common/Input/Text/Text'
 import styles from './LoginPage.module.scss'
-import { GetUserIdFromLocalStorage, GetUserPasswordFromLocalStorage, setUserIdInLocalStorage, setUserPasswordInLocalStorage } from '../../services/Storage/LocalStorage'
+import {
+    GetUserIdFromLocalStorage,
+    GetUserPasswordFromLocalStorage,
+    setUserIdInLocalStorage,
+    setUserPasswordInLocalStorage
+} from '../../services/Storage/LocalStorage'
 import { LoginUser } from '../../services/Api/ApiCaller'
 import { useNavigate } from 'react-router-dom'
 import { ROUTE_PATHS } from '../../routesConfig'
 import Loader from '../Common/Loader/Loader'
 import AlertManager from '../Common/AlertBox/AlertManager'
+
+// 👇 Import image here
+import loginBackground from '../assets/doc10.png'
 
 export const LoginPage = () => {
     const navigate = useNavigate();
@@ -18,13 +26,14 @@ export const LoginPage = () => {
     const [isChecked, setIsChecked] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     const alertManagerRef = useRef();
+
     function onUserNameChange(eve) {
         setUserId(eve?.target?.value ?? "")
     }
     function onPasswordChange(eve) {
-
         setPassword(eve?.target?.value ?? "")
     }
+
     useEffect(() => {
         let userIdFromLocalStorage = GetUserIdFromLocalStorage() ?? "";
         let passwordFromLocalStorage = GetUserPasswordFromLocalStorage() ?? "";
@@ -43,23 +52,17 @@ export const LoginPage = () => {
         validate();
     }, [userId, password])
 
-
     async function loginClicked() {
-        if (!enableBtn) {
-            return
-        }
-        if (isChecked) {
-            setLoginInfoInLocal()
-        }
+        if (!enableBtn) return
+        if (isChecked) setLoginInfoInLocal()
+
         setIsLoading(true)
         let loginStatus = await LoginUser(userId, password)
         setIsLoading(false)
 
         if (loginStatus?.success) {
             navigate(ROUTE_PATHS.HOME)
-        }
-        else {
-            // Something went wrong
+        } else {
             alertManagerRef.current.showAlert('Error', 'Something went wrong!', 5);
         }
     }
@@ -69,11 +72,13 @@ export const LoginPage = () => {
         setUserPasswordInLocalStorage(password)
     }
 
-    const handleCheckboxChange = (event) => {
-        setIsChecked(!isChecked);
-    };
+    const handleCheckboxChange = () => setIsChecked(!isChecked);
+
     return (
-        <div className={styles.loginOuter}>
+        <div
+            className={styles.loginOuter}
+            style={{ backgroundImage: `url(${loginBackground})` }}  // 👈 inline background
+        >
             <AlertManager ref={alertManagerRef} />
             <Loader isLoading={isLoading} />
             <div className={styles.title}>
@@ -84,6 +89,7 @@ export const LoginPage = () => {
                 <div style={{ height: "10px" }}></div>
                 <TextInput value={password} placeholder="Password" onChange={onPasswordChange} />
                 <div style={{ height: "10px" }}></div>
+
                 <div className={styles.customCheckbox}>
                     <input
                         type="checkbox"
@@ -93,12 +99,17 @@ export const LoginPage = () => {
                     />
                     <span onClick={handleCheckboxChange} className={styles.remember}>
                         Remember me in this device
-
                     </span>
                 </div>
 
                 <div style={{ height: "10px" }}></div>
-                <AppButton disable={!enableBtn} buttonStyle={{ width: "93%" }} label="Login" onclick={loginClicked} />
+                <AppButton
+                    disable={!enableBtn}
+                    buttonStyle={{ width: "93%" }}
+                    label="Login"
+                    onclick={loginClicked}
+                />
             </div>
-        </div>)
+        </div>
+    )
 }
