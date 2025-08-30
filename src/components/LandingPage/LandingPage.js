@@ -6,18 +6,16 @@ import doc5 from "../assets/doc2.jpeg";
 import doc4 from "../assets/doc4.png";
 import doc10 from "../assets/doc10.png";  
 import doc2 from "../assets/doc2.png";
+import { useNavigate } from "react-router-dom";
+
 
 
 
 export const LandingPage = () => {
   const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
   const [userName, setUserName] = useState("");
+  const navigate = useNavigate();
 
-  const navigate = (path) => {
-    // Simulate navigation - replace with actual router navigation
-    console.log(`Navigating to: ${path}`);
-    // In your actual app, use: navigate(path);
-  };
 
   useEffect(() => {
     // Simulated user details check
@@ -127,14 +125,14 @@ export const LandingPage = () => {
 
         <div>
           <button 
-  onClick={() => window.location.href = "/tumorapp#/login"}
+  onClick={() => navigate("/login")}
   style={{
     padding:"0.9rem 2.5rem", margin:"0 1.0rem", background:"linear-gradient(90deg,#05fa8c,#14c48d)",
     color:"#1b2530", fontWeight:"bold", fontSize:"1.1rem", border:"none", borderRadius:"25px",
     boxShadow:"0 2px 12px #05fa8c90", cursor:"pointer"
   }}
 >
-  Get Started 
+  Get Started
 </button>
 
         </div>
